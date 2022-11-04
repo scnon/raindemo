@@ -1,4 +1,7 @@
 var http = require('http');
+var mysql = require('./mysql')
+
+// mysql.test();
 
 http.createServer(function (request, response) {
 
@@ -7,6 +10,7 @@ http.createServer(function (request, response) {
     // 内容类型: text/plain
     response.writeHead(200, {'Content-Type': 'text/plain'});
 
+    
     // 发送响应数据 "Hello World"
     response.end('Hello World\n');
 }).listen(8888);

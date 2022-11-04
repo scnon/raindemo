@@ -1,17 +1,18 @@
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '123456',
-  database : 'test'
-});
- 
-export default testMysql = function () {
-    
-connection.connect();
- 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
+var mysql = require('mysql');
+
+exports.test = function () {
+
+    var connection = mysql.createConnection({
+        host: '127.0.0.1',
+        user: 'root',
+        port: 10000,
+        password: '123456',
+        database: 'user'
+    });
+    connection.connect();
+
+    connection.query('SELECT *', function (error, results, fields) {
+        if (error) throw error;
+        console.log('The solution is: ', results[0].solution);
+    });
 }
