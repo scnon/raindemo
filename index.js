@@ -1,7 +1,6 @@
 var http = require('http');
 var mysql = require('./mysql')
 
-// mysql.test();
 
 http.createServer(function (request, response) {
 
