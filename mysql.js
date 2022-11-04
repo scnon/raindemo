@@ -5,7 +5,7 @@ exports.test = function () {
     var connection = mysql.createConnection({
         host: '127.0.0.1',
         user: 'root',
-        port: 10000,
+        port: 3306,
         password: '123456',
         database: 'mysql'
     });
